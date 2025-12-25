@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ブルアカ連動ルーレット・完全版</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <audio id="finishRoll" src="ロールの閉め.mp3"></audio>
+    <audio id="drumRoll" src="ドラムロール.mp3"></audio>
+    <audio id="timpaniRoll" src="ティンパニロール.mp3"></audio>
+
+    <div class="section">
+      <h1>ルーレット①：学園選択</h1>
+      <div class="roulette-container">
+        <div class="pointer"></div>
+        <div id="wheel1" class="wheel"></div>
+      </div>
+      <button id="spin-button1">学園を抽選</button>
+      <div id="result1" class="result-text"></div>
+    </div>
+
+    <div class="section" id="roulette2-section">
+      <h1 id="title2">ルーレット②：生徒選択</h1>
+      <div class="roulette-container">
+        <div class="pointer"></div>
+        <div id="wheel2" class="wheel"></div>
+      </div>
+      <button id="spin-button2">生徒を抽選</button>
+      <div id="result2" class="result-text"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

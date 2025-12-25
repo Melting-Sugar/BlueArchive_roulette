@@ -1,0 +1,114 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1a1a1a;
+  color: #fff;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+  padding: 40px 0;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px;
+  width: 100%;
+}
+
+h1 {
+  color: #00ffff;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+  font-size: 1.5rem;
+}
+
+.roulette-container {
+  position: relative;
+  width: 450px;
+  height: 450px;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 0 15px rgba(0, 255, 255, 0.2));
+}
+
+.pointer {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 45px solid #ffff00;
+  z-index: 100;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.5));
+}
+
+.wheel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 8px solid #000;
+  box-sizing: border-box;
+  transition: transform 5s cubic-bezier(0.4, 0.4, 0, 1);
+  overflow: hidden;
+  background-color: #333;
+}
+
+.label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.label span {
+  display: block;
+  position: absolute;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  white-space: nowrap;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 0 2px 4px rgba(0, 0, 0, 1);
+}
+
+button {
+  padding: 12px 50px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #000;
+  background: linear-gradient(45deg, #ff00ff, #00ffff);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 5px 20px rgba(0, 255, 255, 0.4);
+  transition: 0.3s;
+}
+
+button:disabled {
+  filter: grayscale(1);
+  opacity: 0.5;
+}
+
+.result-text {
+  margin-top: 15px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #00ffff;
+  min-height: 1.2em;
+  text-align: center;
+}
+
+#roulette2-section {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.8s;
+}
